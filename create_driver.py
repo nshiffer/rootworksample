@@ -16,3 +16,4 @@ class Driver:
       return
     
     print(self.name+": "+distStringt+" @ "+self.avgSpeed+" mph")
+    return
