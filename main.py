@@ -8,7 +8,7 @@ from datetime import datetime
 import sys
 
 # This is the program entry point
-# exampl: ./test_cases/given_test.txt
+# example: ./test_cases/given_test.txt
 try:
     in_file = str(sys.argv[1])
 except:
