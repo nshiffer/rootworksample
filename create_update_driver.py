@@ -2,13 +2,16 @@
 # Github: nshiffer
 # Contact: shiffer.7@osu.edu
 
+
 class Driver:
+    # avg_speed = total_dist / total_time
+    # total_dist = sum of all trip distances
+    # total_time = sum of all trip times
     def __init__(self, name):
         self.name = name
         self.avg_speed = 0
         self.total_dist = 0
         self.total_time = 0
-        self.past_trips = []
 
 
     # function that prints output in the desired format
@@ -54,5 +57,4 @@ class Driver:
         self.update_avg_speed(trip_dist, trip_time)
         self.update_distance(trip_dist)
         self.total_time += trip_time
-        self.past_trips.append((trip_time, trip_dist))
         return
