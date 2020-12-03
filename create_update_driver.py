@@ -7,6 +7,7 @@ class Driver:
         self.name = name
         self.avg_speed = 0
         self.total_dist = 0
+        self.total_time = 0
         self.past_trips = []
 
 
@@ -30,12 +31,12 @@ class Driver:
     # function updates average speed in the object
     # @param speed - the speed in mph to be added
 
-    def update_avg_speed(self, speed):
+    def update_avg_speed(self, new_dist, new_time):
         #update total speed
-        total = speed + self.avg_speed*len(self.past_trips)
+        tot_dist = new_dist + self.total_dist
         #Calculate new average speed
-        new_avg = total / (len(self.past_trips)+1.0)
-        self.avg_speed = new_avg
+        tot_time = new_time + self.total_time
+        self.avg_speed = tot_dist/tot_time
         return
 
     # function updates the total distance
@@ -50,7 +51,8 @@ class Driver:
     # @param trip_dist: the distance of the trip
 
     def add_trip(self, trip_time, trip_dist):
-        self.update_avg_speed((trip_dist/trip_time))
+        self.update_avg_speed(trip_dist, trip_time)
         self.update_distance(trip_dist)
+        self.total_time += trip_time
         self.past_trips.append((trip_time, trip_dist))
         return

@@ -1,6 +1,6 @@
 Error: Invalid distance or speed (Trip Test_Max_Duration 00:01 23:59 100) line skipped
 Error: Invalid distance or speed (Trip Test_Max_Speed_Error2 01:00 02:00 101) line skipped
 Test_Max_Duration: 0 miles
-Test_Max_Speed: 99.0 miles @ 99.0 mph
-Test_Max_Speed2: 100.0 miles @ 100.0 mph
+Test_Max_Speed: 99 miles @ 99 mph
+Test_Max_Speed2: 100 miles @ 100 mph
 Test_Max_Speed_Error2: 0 miles

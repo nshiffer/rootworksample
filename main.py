@@ -13,6 +13,9 @@ try:
     in_file = str(sys.argv[1])
 except:
     print("Error with command line args, default file used")
+    #"./test_cases/easy_test.txt"
+    #"./test_cases/edge_case_max.txt"
+    #"./test_cases/edge_case_zeroes.txt"
     in_file = "./test_cases/given_test.txt"
 #open, read and close file
 with open(in_file) as fp:

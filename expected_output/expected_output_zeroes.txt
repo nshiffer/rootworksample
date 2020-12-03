@@ -5,6 +5,6 @@ Error: Invalid distance or speed (Trip 0 01:00 02:00 3) line skipped
 Test_No_Trip: 0 miles
 Test_Trip_Len_0: 0 miles
 Test_Trip_Speed_0: 0 miles
-Test_Trip_Time_0: 30.0 miles @ 30.0 mph
+Test_Trip_Time_0: 30 miles @ 30 mph
 Test_Trip_Everything_0: 0 miles
 0: 0 miles

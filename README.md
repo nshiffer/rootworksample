@@ -12,7 +12,9 @@ Contact: shiffer.7@osu.edu
 
 Make sure you have python installed
 
-To run use: python main.py {test_file_path}
+Install dependencies: pip install -r requirements.txt (or conda install -r requirements.txt, if you use conda) (this is just to make sure you have datetime installed)
+
+To run program: python main.py {test_file_path}
 
 Example: python main.py ./test_cases/given_test.txt
 
@@ -49,7 +51,7 @@ create_update_driver.py: this file contains code that creates and updates driver
 
 test_cases: folder that stores test cases for the program. Edge cases test cases are denoted with the prefix "edge_case".
 
-Expected_output: folder that contains expected output for the test cases
+expected_output: folder that contains expected output for the test cases
 
 ## Testing
 
