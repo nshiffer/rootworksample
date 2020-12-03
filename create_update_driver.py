@@ -31,7 +31,9 @@ class Driver:
     # @param speed - the speed in mph to be added
 
     def update_avg_speed(self, speed):
+        #update total speed
         total = speed + self.avg_speed*len(self.past_trips)
+        #Calculate new average speed
         new_avg = total / (len(self.past_trips)+1.0)
         self.avg_speed = new_avg
         return

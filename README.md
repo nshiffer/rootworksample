@@ -41,9 +41,11 @@ There are two main code files main.py and create_driver.py. First, in main.py a 
 
 ## File Structure
 
-main: This file contains code that opens the file, parses, cleans and prints out the given data.
+main.py: This file contains code that opens the file and prints out the given data.
 
-create_driver: this file contains code that creates and updates drivers in the system.
+input_parsing.py: This file parses and cleans the input and handles any errors
+
+create_update_driver.py: this file contains code that creates and updates drivers in the system.
 
 test_cases: folder that stores test cases for the program. Edge cases test cases are denoted with the prefix "edge_case".
 
@@ -51,7 +53,7 @@ Expected_output: folder that contains expected output for the test cases
 
 ## Testing
 
-Testing was completed
+Testing was completed using input files and expected output. Testing began with the given sample and expected output. These can be found in test_cases/given_test.txt, and expected_output/expected_output_given_test.txt. From there I moved to random test cases to determine usability and edge case testing to see how the program handles edge cases such as 0 distance, 0 time, and 0 speed, max/very high distance, time and speed.
 
 ## Future improvements
 
