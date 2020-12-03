@@ -1,0 +1,6 @@
+Error: Invalid distance or speed (Trip UserWithVerySlowCar 01:00 23:50 1) line skipped
+Error: Invalid time format (Trip UserWithTenTrips 0111:00 01:10 2) line skipped
+SimpleUser: 17.3 miles @ 11.5 mph
+UserWithNoTrips: 0 miles
+UserWithVerySlowCar: 0 miles
+UserWithTenTrips: 18.0 miles @ 64.8 mph

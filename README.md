@@ -6,16 +6,33 @@ Author: Nicholas Shiffer
 
 Github: nshiffer
 
+Contact: shiffer.7@osu.edu
+
+## Running
+
+Make sure you have python installed
+
+To run use: python main.py {test_file_path}
+
+Example: python main.py ./test_cases/given_test.txt
+
+If you do not specify a test file, the default test file will be used.
+
 ## Assumptions
 
-If the difference in time is <=0 then this is an error and should be discarded
-Correct distances are positive, so negative distances should be discarded.
-Backwards travel is considered positive distance.
-Second time should be less than first time. If true, will be discarded
+-If the difference in time is <=0 then this is an error and should be discarded
+
+-Correct distances are positive, so negative distances should be discarded.
+
+-Backwards travel is considered positive distance.
+
+-Second time should be less than first time. If false, will be discarded
 
 ## Brainstorming
 
-I knew from the start that I would wanted to create a new object that had the average speed and total distance stored. I decided to store this new object in a dictionary for easy access and search when looking up a particular driver.
+I knew from the start that I would wanted to create a new object that had the average speed and total distance stored. I decided to store this new object in a dictionary for easy access and search when looking up a particular driver. I chose this approach over a data frame or pure dictionary as I wanted to be able to fully customize the object to fit the prompts and my needs. I also wanted to show my ability to create object that solve a need and can determine the best way to store a datatype.
+
+I decided on three files for the implementation, one for input and output, one for initial processing and error handling, and one for object creation and updating. I chose this approach as it is a common approach in python to have one file for the frontend, one for parsing, and one for the backend. While this project does not exactly require frontend and backend structures, I wanted to be able to have the object creation and updating code separate so that it could be used by itself in the future.
 
 ## Implementation
 
@@ -32,8 +49,12 @@ test_cases: folder that stores test cases for the program. Edge cases test cases
 
 Expected_output: folder that contains expected output for the test cases
 
+## Testing
+
+Testing was completed
+
 ## Future improvements
 
-- If in the future more statistics were needed to be kept track of, I would use a pandas dataframe to store the data. This would allow for easy calculations and manipulation with a larger data set. I did not use pandas in this work sample as this problem was simple enough to solve be creating a new object which allowed my more control. I also wanted to display my ability to create complete solutions to problems.
+-If in the future more statistics were needed to be kept track of, I would use a pandas dataframe to store the data. This would allow for easy calculations and manipulation with a larger data set. I did not use pandas in this work sample as this problem was simple enough to solve be creating a new object which allowed my more control. I also wanted to display my ability to create complete solutions to problems.
 
-- Adding a save file that holds the drivers and driver information from past runs of the program. This file can be loaded back into the program and drivers already in the system can be updated.
+-Adding a save file that holds the drivers and driver information from past runs of the program. This file can be loaded back into the program and drivers already in the system can be updated.

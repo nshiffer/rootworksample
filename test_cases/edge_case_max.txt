@@ -1,0 +1,8 @@
+Driver Test_Max_Duration
+Trip Test_Max_Duration 00:01 23:59 100
+Driver Test_Max_Speed
+Trip Test_Max_Speed 01:00 02:00 99
+Driver Test_Max_Speed2
+Trip Test_Max_Speed2 01:00 02:00 100
+Driver Test_Max_Speed_Error2
+Trip Test_Max_Speed_Error2 01:00 02:00 101

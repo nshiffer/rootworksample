@@ -1,1 +1,10 @@
-
+Error: Invalid time format (Trip Test_Trip_Len_0 01:00 01:00 17.3) line skipped
+Error: Invalid distance or speed (Trip Test_Trip_Speed_0 01:00 02:00 0) line skipped
+Error: Invalid time format (Trip Test_Trip_Time_0 00:00 00:00 0) line skipped
+Error: Invalid distance or speed (Trip 0 01:00 02:00 3) line skipped
+Test_No_Trip: 0 miles
+Test_Trip_Len_0: 0 miles
+Test_Trip_Speed_0: 0 miles
+Test_Trip_Time_0: 30.0 miles @ 30.0 mph
+Test_Trip_Everything_0: 0 miles
+0: 0 miles
