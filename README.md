@@ -22,6 +22,8 @@ If you do not specify a test file, the default test file will be used.
 
 ## Assumptions
 
+-Average speed means total distance divided by total time in hours
+
 -If the difference in time is <=0 then this is an error and should be discarded
 
 -Correct distances are positive, so negative distances should be discarded.
