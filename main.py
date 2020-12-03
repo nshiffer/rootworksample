@@ -4,7 +4,7 @@
 
 import create_update_driver
 import input_parsing as inp
-from datetime import datetime
+import datetime
 import sys
 
 # This is the program entry point
