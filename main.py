@@ -12,11 +12,15 @@ import sys
 try:
     in_file = str(sys.argv[1])
 except:
-    print("Error with command line args, default file used")
-    #"./test_cases/easy_test.txt"
-    #"./test_cases/edge_case_max.txt"
-    #"./test_cases/edge_case_zeroes.txt"
-    in_file = "./test_cases/given_test.txt"
+    print("Error with command line args")
+    answer = input("Would you like to use the defualt test file? (./test_cases/given_test.txt)  \nType Y for yes or any other character to exit: ")
+    if answer == "y" or  answer == "Y":
+        #"./test_cases/easy_test.txt"
+        #"./test_cases/edge_case_max.txt"
+        #"./test_cases/edge_case_zeroes.txt"
+        in_file = "./test_cases/given_test.txt"
+    else:
+        sys.exit()
 #open, read and close file
 with open(in_file) as fp:
     file_lines = fp.readlines()
