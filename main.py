@@ -2,7 +2,7 @@
 # Github: nshiffer
 # Contact: shiffer.7@osu.edu
 
-import create_update_driver
+import driver
 import input_parsing as inp
 import datetime
 import sys
@@ -20,11 +20,11 @@ except:
 #open, read and close file
 with open(in_file) as fp:
     file_lines = fp.readlines()
-out_array = {}
+driver_dict = {}
 #parse each line and add to array of objects
 for line in file_lines:
     line_array = line.split()
-    inp.determine_action(line_array, out_array)
+    inp.parse_and_process(line_array, driver_dict)
 # print output in expected format
-for driver in out_array:
-    out_array[driver].prettyPrintInfo()
+for driver in driver_dict.values():
+    driver.prettyPrintInfo()

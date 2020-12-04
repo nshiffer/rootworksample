@@ -2,26 +2,27 @@
 # Github: nshiffer
 # Contact: shiffer.7@osu.edu
 
-import create_update_driver as cud
+import driver as driv
 from datetime import datetime
 
 # function determines the action (create or update) that should be taken based on the Command
 # @param line_array - a line in the line array
 # @param driver_dict - a dictionary that has the driver name as the key and driver object as the value
 
-def determine_action(line_array, driver_dict):
+def parse_and_process(line_array, driver_dict):
     #Driver command action
     if(line_array[0]=="Driver"):
         #create driver
-        driver_dict[line_array[1]] = cud.Driver(line_array[1])
+        driver_dict[line_array[1]] = driv.Driver(line_array[1])
         return
 
     # Trip command action
     elif(line_array[0]=="Trip"):
         #check if diver in dictionary
-        try:
+        #this is using if else as that is the standard way to check a dictionary, try except is used when that is the default handeler
+        if line_array[1] in driver_dict:
             driver = driver_dict[line_array[1]]
-        except:
+        else:
             print("Error: Driver not registered (" +' '.join(line_array) +") line skipped")
             return
 
@@ -33,9 +34,15 @@ def determine_action(line_array, driver_dict):
             return
 
 
-        dist = dist_speed_handler(line_array[4],drive_time)
+        dist = dist_to_float(line_array[4])
 
         if dist == -1:
+             print("Error: Invalid distance or speed (" +' '.join(line_array) +") line skipped")
+             return
+
+        speed_check = check_speed(dist, drive_time)
+
+        if speed_check == -1:
              print("Error: Invalid distance or speed (" +' '.join(line_array) +") line skipped")
              return
 
@@ -46,11 +53,11 @@ def determine_action(line_array, driver_dict):
         print("Error: Command not recognized (" +' '.join(line_array) +") line skipped")
         return
 
-# function that handles input for distances and checks distance and speed for errors
+# function that handles input for distances and checks distance for errors
 # @param dist: string represention of distance
 # @param time: the duration of the trip
 
-def dist_speed_handler(dist, time):
+def dist_to_float(dist):
     try:
         ret = float(dist)
     except:
@@ -58,10 +65,18 @@ def dist_speed_handler(dist, time):
     #check for distance error
     if ret <= 0:
         return -1
-    #check for speed error
-    if ret/time < 5 or ret/time > 100:
-        return -1
     return ret
+
+# function that checks the speed is greater than 5 and less than 100
+# @param dist: string represention of distance
+# @param time: the duration of the trip
+
+def check_speed(dist, time):
+    if dist/time < 5 or dist/time > 100:
+        return -1
+    else:
+        return 1
+
 
 # function that determines the difference of two times and outbuts them as a difference in difference
 # @param time1 - the earlier time in the format hours:minutes

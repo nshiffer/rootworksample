@@ -10,7 +10,7 @@ Contact: shiffer.7@osu.edu
 
 ## Running
 
-Make sure you have python installed
+Make sure you have python 3 >= installed
 
 Install dependencies: pip install -r requirements.txt (or conda install -r requirements.txt, if you use conda) (this is just to make sure you have datetime installed)
 
@@ -40,7 +40,7 @@ I decided on three files for the implementation, one for input and output, one f
 
 ## Implementation
 
-There are two main code files main.py and create_driver.py. First, in main.py a file is selected using command line arguments. This file is then parsed in line by line. Each line is split on the white space and turned into an array of strings. The first element in the array is tested to determine what the action should be. Then depending on the action, a function from create_driver.py is called to handle creating or updating the driver in the dictionary. After successfully completing the action required for each line of input (or discarding the line due to an error), each driver in the dictionary is displayed with their total distance in miles and average speed in mph.
+There are two main code files main.py and create_driver.py. First, in main.py a file is selected using command line arguments. This file is then parsed in line by line. Each line is split on the white space and turned into an array of strings. In input_parsing.py, the first element in the array is tested to determine what the action should be. Then depending on the action, a function from create_driver.py is called to handle creating or updating the driver in the dictionary. After successfully completing the action required for each line of input (or discarding the line due to an error), each driver in the dictionary is displayed with their total distance in miles and average speed in mph.
 
 
 ## File Structure
