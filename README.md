@@ -36,7 +36,7 @@ If you do not specify a test file, the default test file will be used.
 
 ## Brainstorming
 
-I knew from the start that I wanted to create a new object that had the average speed and total distance stored. I decided to store this new object in a dictionary for easy access and search when looking up a particular driver. I chose this approach over a data frame or pure dictionary as I wanted to be able to fully customize the object to fit the prompts and my needs. I also wanted to show my ability to create objects that solves a need and can determine the best way to store a given input.
+I knew from the start that I wanted to create a new object that had the average speed and total distance stored. I decided to store this new object in a dictionary for easy access and search when looking up a particular driver. I chose this approach over a data frame or pure dictionary as I wanted to be able to fully customize the object to fit the prompt's and my needs. A new object made sense here as you have a driver with multiple attributes that need to be updated. I also wanted to show my ability to create objects that solves a need and can determine the best way to store a given input.
 
 I decided on three files for the implementation, one for input and output, one for initial processing and error handling, and one for object creation and updating. I chose this approach as it is a common approach in python to have one file for the frontend, one for parsing, and one for the backend. While this project does not exactly require frontend and backend structures, I wanted to be able to have the object creation and updating code separate so that it could be used by itself in the future.
 
