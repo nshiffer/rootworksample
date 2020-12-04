@@ -20,7 +20,7 @@ To run program: python main.py {test_file_path}
 
 Example: python main.py ./test_cases/given_test.txt
 
-If you do not specify a test file, the default test file will be used.
+If you do not specify a test file, the default test file may be used.
 
 ## Assumptions
 
