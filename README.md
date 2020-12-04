@@ -30,36 +30,40 @@ If you do not specify a test file, the default test file will be used.
 
 -Correct distances are positive, so negative distances should be discarded.
 
--Backwards travel is considered positive distance.
+-Backwards travel is recorded as positive distance.
 
 -Second time should be less than first time. If false, will be discarded
 
 ## Brainstorming
 
-I knew from the start that I would wanted to create a new object that had the average speed and total distance stored. I decided to store this new object in a dictionary for easy access and search when looking up a particular driver. I chose this approach over a data frame or pure dictionary as I wanted to be able to fully customize the object to fit the prompts and my needs. I also wanted to show my ability to create object that solve a need and can determine the best way to store a datatype.
+I knew from the start that I wanted to create a new object that had the average speed and total distance stored. I decided to store this new object in a dictionary for easy access and search when looking up a particular driver. I chose this approach over a data frame or pure dictionary as I wanted to be able to fully customize the object to fit the prompts and my needs. I also wanted to show my ability to create objects that solves a need and can determine the best way to store a given input.
 
 I decided on three files for the implementation, one for input and output, one for initial processing and error handling, and one for object creation and updating. I chose this approach as it is a common approach in python to have one file for the frontend, one for parsing, and one for the backend. While this project does not exactly require frontend and backend structures, I wanted to be able to have the object creation and updating code separate so that it could be used by itself in the future.
 
 ## Implementation
 
-There are two main code files main.py and create_driver.py. First, in main.py a file is selected using command line arguments. This file is then parsed in line by line. Each line is split on the white space and turned into an array of strings. In input_parsing.py, the first element in the array is tested to determine what the action should be. Then depending on the action, a function from create_driver.py is called to handle creating or updating the driver in the dictionary. After successfully completing the action required for each line of input (or discarding the line due to an error), each driver in the dictionary is displayed with their total distance in miles and average speed in mph.
+There are three main code files main.py, input_parsing.py, and create_driver.py. First, in main.py a file is selected using command line arguments. This file is then parsed in line by line. Each line is split on the white space and turned into an array of strings. In input_parsing.py, the first element in the array is tested to determine what the action should be and the data proceeding is converted to a formatted usable by the driver.py class. Then depending on the action, a function from driver.py is called to handle creating or updating the driver in the dictionary. After successfully completing the action required for each line of input (or discarding the line due to an error), each driver in the dictionary is displayed with their total distance in miles and average speed in mph.
 
 
 ## File Structure
 
-main.py: This file contains code that opens the file and prints out the given data.
+main.py: This opens the file and prints out the given data.
 
 input_parsing.py: This file parses and cleans the input and handles any errors
 
-create_update_driver.py: this file contains code that creates and updates drivers in the system.
+create_update_driver.py: This file creates and updates drivers in the system.
+
+requirements.txt: package requirements for the program
 
 test_cases: folder that stores test cases for the program. Edge cases test cases are denoted with the prefix "edge_case".
 
-expected_output: folder that contains expected output for the test cases
+|-- expected_output: folder that contains expected output for the test cases
 
 ## Testing
 
-Testing was completed using input files and expected output. Testing began with the given sample and expected output. These can be found in test_cases/given_test.txt, and expected_output/expected_output_given_test.txt. From there I moved to random test cases to determine usability and edge case testing to see how the program handles edge cases such as 0 distance, 0 time, and 0 speed, max/very high distance, time and speed.
+To begin testing, I tested each function and file with input that would be expected as parameters. Once I conformed that was working I moved to unexpected input and output from other functions. I repeated this process until I confirmed that all the connected functions were working with each other.
+
+Testing was then completed using input files and expected output. Testing began with the given sample and expected output. These can be found in test_cases/given_test.txt, and expected_output/expected_output_given_test.txt. From there I moved to random test cases to determine usability and edge case testing to see how the program handles edge cases such as 0 distance, 0 time, and 0 speed, max/very high distance, time and speed.
 
 ## Future improvements
 
