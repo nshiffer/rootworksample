@@ -2,6 +2,8 @@
 
 Work Sample for Root Insurance, Written in Python
 
+This program will take in a text file of driving information and output each drivers total distance and average speed
+
 Author: Nicholas Shiffer
 
 Github: nshiffer
